@@ -50,8 +50,8 @@ class Base:
         """Return class instantiated from dictionary of attributes."""
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
-                new = cls(1, 1
-)
+                new = cls(1, 1)
+
             else:
                 new = cls(1)
             new.update(**dictionary)
@@ -67,7 +67,7 @@ class Base:
                 list_dicts = Base.from_json_string(jsonfile.read())
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
-            
+
             return []
 
     @classmethod
@@ -77,11 +77,10 @@ class Base:
         with open(filename, "w", newline="") as csvfile:
             if list_objs is None or list_objs == []:
                 csvfile.write("[]")
-            
             else:
                 if cls.__name__ == "Rectangle":
                     fieldnames = ["id", "width", "height", "x", "y"]
-                
+
                 else:
                     fieldnames = ["id", "size", "x", "y"]
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -92,12 +91,12 @@ class Base:
     def load_from_file_csv(cls):
         """Return list of class instantiated from a CSV file."""
         filename = cls.__name__ + ".csv"
-        
+
         try:
             with open(filename, "r", newline="") as csvfile:
                 if cls.__name__ == "Rectangle":
                     fieldnames = ["id", "width", "height", "x", "y"]
-                
+
                 else:
                     fieldnames = ["id", "size", "x", "y"]
                 list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
@@ -105,7 +104,7 @@ class Base:
                               for d in list_dicts]
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
-            
+
             return []
 
     @staticmethod
