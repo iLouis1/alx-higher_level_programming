@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """ This contains the class definition
 of a City """
