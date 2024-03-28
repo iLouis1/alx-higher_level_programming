@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This script does the following:
 - Sends a POST request to http://0.0.0.0:5000/search_user
-- Takes in a letter 
+- Takes in a letter
 """
 import sys
 import requests
