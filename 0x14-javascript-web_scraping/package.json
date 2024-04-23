@@ -1,0 +1,17 @@
+{
+  "name": "0x14-javascript-web_scraping",
+  "version": "1.0.0",
+  "description": "0x14. JavaScript - Web scraping",
+  "main": "0-readme.js",
+  "dependencies": {
+    "package.json": "^2.0.1",
+    "pkg.json": "^2.0.8",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
